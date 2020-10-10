@@ -1,0 +1,16 @@
+<templateSet group="user">
+  <template name="log" value="private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger( $CLASS$.class );" description="Get a SLF4J Logger" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="with" value="private $TYPE$ $NAME$;&#10;$END$&#10;public $CLASS_NAME$ $NAME$($TYPE$ $NAME$) {&#10;    this.$NAME$ = $NAME$;&#10;    return this;&#10;}" description="Builder Setter Style" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="typeOfVariable(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="NAME" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

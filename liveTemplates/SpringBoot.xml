@@ -1,0 +1,16 @@
+<templateSet group="SpringBoot">
+  <template name="cget" value="@GetMapping(&quot;/$URI_MAPPING$&quot;)&#10;$TYPE$ $NAME$() {&#10;    return repository.findAll();&#10;}" description="Rest Get Mapping" toReformat="false" toShortenFQNames="true">
+    <variable name="URI_MAPPING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="clr" value="@Bean&#10;CommandLineRunner initDatabase($dependency$) {&#10;    return args -&gt; {&#10;    };&#10;}" description="SpringBoot CommandLineRunner" toReformat="false" toShortenFQNames="true">
+    <variable name="dependency" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
